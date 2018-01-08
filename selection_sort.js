@@ -1,57 +1,57 @@
 //Displays a row of the array
-var displayArray = function(array, min, height) {
+var displayArray = function (array, min, height) {
 
     // Use the monospace font in yellow
-    textFont(createFont("monospace"), 25);
+    textFont(createFont('monospace'), 25);
     fill(230, 255, 0);
 
     // loop through the array
-    for (var i = 0; i < array.length; i++){
+    for (var i = 0; i < array.length; i++) {
       //Displays a row of the array
-var displayArray = function(array, min, height) {
+      var displayArray = function (array, min, height) {
 
-  // Use the monospace font in yellow
-  textFont(createFont("monospace"), 25);
-  fill(230, 255, 0);
+        // Use the monospace font in yellow
+        textFont(createFont('monospace'), 25);
+        fill(230, 255, 0);
 
-  // loop through the array
-  for (var i = 0; i < array.length; i++){
+        // loop through the array
+        for (var i = 0; i < array.length; i++) {
 
-      // display the number at 40px increments
-      text(array[i], min + (i * 40), height);
-      // If it is not the last number
-      if (i !== array.length -1){
-          // Add a dash in between the numbers
-          text(",", min + 26 + (i * 40), height);
-      }
-  }
-};
+            // display the number at 40px increments
+            text(array[i], min + (i * 40), height);
+            // If it is not the last number
+            if (i !== array.length - 1) {
+                // Add a dash in between the numbers
+                text(',', min + 26 + (i * 40), height);
+            }
+        }
+      };
 
-// Swap function to swap two indexes in an array
-var swap = function(array, firstIndex, secondIndex) {
-  var temp = array[firstIndex];
-  array[firstIndex] = array[secondIndex];
-  array[secondIndex] = temp;
-};
+      // Swap function to swap two indexes in an array
+      var swap = function (array, firstIndex, secondIndex) {
+        var temp = array[firstIndex];
+        array[firstIndex] = array[secondIndex];
+        array[secondIndex] = temp;
+      };
 
-// Find the next smallest index from a given start index
-var indexOfMinimum = function(array, startIndex) {
+      // Find the next smallest index from a given start index
+      var indexOfMinimum = function (array, startIndex) {
 
-  // Store the start index value and number
-  var minValue = array[startIndex];
-  var minIndex = startIndex;
+        // Store the start index value and number
+        var minValue = array[startIndex];
+        var minIndex = startIndex;
 
-  // Loop through the rest of the array
-  for(var i = minIndex + 1; i < array.length; i++) {
-      // If the current index is smaller then the starting index
-      if(array[i] < minValue) {
-          // Make that the lowest index we have
-          minIndex = i;
-          minValue = array[i];
-      }
-  }
-  return minIndex;
-};
+        // Loop through the rest of the array
+        for (var i = minIndex + 1; i < array.length; i++) {
+            // If the current index is smaller then the starting index
+            if (array[i] < minValue) {
+                // Make that the lowest index we have
+                minIndex = i;
+                minValue = array[i];
+            }
+        }
+        return minIndex;
+      };
 
 // Impliment everything above for selection sort
 var selectionSort = function(array, min, height) {
